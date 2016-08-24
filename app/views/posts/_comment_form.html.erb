@@ -1,7 +1,7 @@
 <%= form_for([@post, @post.comments.build]) do |f| %>
     <p>
       <%= f.label :commenter %><br>
-      <%= f.text_field :commenter, :value => "Anonymous" %>
+      <%= f.text_field :commenter, :value => "Anonymous", :id => 'disabled', readonly: true %>
     </p>
     <p>
       <%= f.label :body %><br>
