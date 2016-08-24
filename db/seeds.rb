@@ -8,6 +8,6 @@
 
 # Post.delete_all
 
-45.times do
+75.times do
   Post.create(title: Faker::ChuckNorris.fact, body: Faker::ChuckNorris.fact)
 end
