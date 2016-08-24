@@ -1,0 +1,35 @@
+<%= form_for @post do |f| %>
+
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <ul class="collection">
+        <li class="collection-header">
+          <h4>
+            <%= pluralize(@post.errors.count, "error") %> prohibited
+            this post from being saved:
+          </h4>
+        </li>
+        <% @post.errors.full_messages.each do |msg| %>
+          <li class="collection-item"><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="input-field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+
+
+
+<div class="input-field">
+  <%= f.label :body %><br>
+  <%= f.text_field :body %>
+</div>
+
+  <p>
+    <a class="waves-effect waves-light btn"><%= f.submit %></a>
+  </p>
+
+<% end %>

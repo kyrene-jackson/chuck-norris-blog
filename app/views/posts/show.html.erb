@@ -1,0 +1,17 @@
+<h1 class="title">
+  <%= @post.title %>
+</h1>
+<p class="body">
+  <%= @post.body %>
+</p>
+<p class="date">
+  Submitted <%= time_ago_in_words(@post.created_at) %> ago
+</p>
+<h4>Comments:</h4>
+<%= render 'comments' %>
+<br />
+<h5>Add a comment:</h5>
+<%= render 'comment_form' %>
+
+<%= link_to 'Edit', edit_post_path(@post), :class => 'waves-effect waves-light btn' %>
+<%= link_to 'Back', posts_index_path, :class => 'waves-effect waves-light btn red darken-4' %>

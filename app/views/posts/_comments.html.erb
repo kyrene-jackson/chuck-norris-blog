@@ -1,0 +1,6 @@
+<p class="comments">
+  <% @post.comments.each do |comment| %>
+    <strong><%= comment.commenter %>:</strong><br />
+    <%= comment.body %>
+</p>
+<% end %>
