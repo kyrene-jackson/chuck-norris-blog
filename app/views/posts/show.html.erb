@@ -7,4 +7,15 @@
 <p class="date">
   Submitted <%= time_ago_in_words(@post.created_at) %> ago
 </p>
+<h4>Comments:</h4>
+<p class="comments">
+  <% @post.comments.each do |comment| %>
+    <%= comment.commenter %>:<br />
+    <%= comment.body %>
+</p>
+<% end %>
+<br />
+<h5>Add a comment:</h5>
+<%= render 'comment_form' %>
+
 <%= link_to 'Back', posts_index_path %>

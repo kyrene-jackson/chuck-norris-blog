@@ -1,0 +1,13 @@
+<%= form_for([@post, @post.comments.build]) do |f| %>
+    <p>
+      <%= f.label :commenter %><br>
+      <%= f.text_field :commenter, :value => "Anonymous" %>
+    </p>
+    <p>
+      <%= f.label :body %><br>
+      <%= f.text_field :body %>
+    </p>
+    <p>
+      <a class="waves-effect waves-light btn"><%= f.submit %></a>
+    </p>
+  <% end %>
